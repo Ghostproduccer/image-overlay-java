@@ -14,35 +14,16 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         File fileImageFG1 = new File("src\\3faba9374bc1c797af8a7655b43a302c.jpg");
-        // File fileImageFG2 = new File("src\\Untitled-1.png");
-        // File fileImageFG3 = new File("src\\pngfind.com-shooting-star-png-550433.png");
-        // File fileImageFG4 = new File("src\\071bfb4f4d15848a6c5c78f4db6282b0.jpg");
 
         File fileImageBG1 = new File("src\\item-img-3.png");
-        // File fileImageBG2 = new File("src\\item-img-cap-black.png");
-        // File fileImageBG3 = new File("src\\item-img-mug-orange.png");
+
 
         final Image fgImage1 = ImageIO.read(fileImageFG1);
-        // final Image fgImage2 = ImageIO.read(fileImageFG2);
-        // final Image fgImage3 = ImageIO.read(fileImageFG3);
-        // final Image fgImage4 = ImageIO.read(fileImageFG4);
 
         final Image bgImage1 = ImageIO.read(fileImageBG1);
-        // final Image bgImage2 = ImageIO.read(fileImageBG2);
-        // final Image bgImage3 = ImageIO.read(fileImageBG3);
 
         BufferedImage finalImage1 = overlayImages(fgImage1, bgImage1);
-        // BufferedImage finalImage2 = overlayImages(fgImage2, bgImage1);
-        // BufferedImage finalImage3 = overlayImages(fgImage3, bgImage1);
-        // BufferedImage finalImage4 = overlayImages(fgImage4, bgImage1);
-        // BufferedImage finalImage5 = overlayImages(fgImage1, bgImage2);
-        // BufferedImage finalImage6 = overlayImages(fgImage2, bgImage2);
-        // BufferedImage finalImage7 = overlayImages(fgImage3, bgImage2);
-        // BufferedImage finalImage8 = overlayImages(fgImage4, bgImage2);
-        // BufferedImage finalImage9 = overlayImages(fgImage1, bgImage3);
-        // BufferedImage finalImage10 = overlayImages(fgImage2, bgImage3);
-        // BufferedImage finalImage11 = overlayImages(fgImage3, bgImage3);
-        // BufferedImage finalImage12 = overlayImages(fgImage4, bgImage3);
+
 
         Runnable r = new Runnable() {
             @Override
@@ -50,17 +31,7 @@ public class Main {
                 JPanel gui = new JPanel(new GridLayout(1, 0, 5, 5));
 
                 gui.add(new JLabel(new ImageIcon(finalImage1)));
-                // gui.add(new JLabel(new ImageIcon(finalImage2)));
-                // gui.add(new JLabel(new ImageIcon(finalImage3)));
-                // gui.add(new JLabel(new ImageIcon(finalImage4)));
-                // gui.add(new JLabel(new ImageIcon(finalImage5)));
-                // gui.add(new JLabel(new ImageIcon(finalImage6)));
-                // gui.add(new JLabel(new ImageIcon(finalImage7)));
-                // gui.add(new JLabel(new ImageIcon(finalImage8)));
-                // gui.add(new JLabel(new ImageIcon(finalImage9)));
-                // gui.add(new JLabel(new ImageIcon(finalImage10)));
-                // gui.add(new JLabel(new ImageIcon(finalImage11)));
-                // gui.add(new JLabel(new ImageIcon(finalImage12)));
+
 
                 JOptionPane.showMessageDialog(null, gui);
             }
